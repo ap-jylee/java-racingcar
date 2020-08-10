@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Objects;
+
 public class Car implements Cloneable {
 
     private final String name;
@@ -12,7 +14,7 @@ public class Car implements Cloneable {
     }
 
     private void validateName(String name) {
-        if(name == null || name.isEmpty() || name.length() > 5) {
+        if(Objects.isNull(name) || name.isEmpty() || name.length() > 5) {
             throw new IllegalArgumentException();
         }
     }

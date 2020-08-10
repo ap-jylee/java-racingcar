@@ -24,7 +24,7 @@ public class CarRacingRapScore {
         return cars.stream()
                 .filter(car -> car.checkPosition(bestScore))
                 .map(Car::getName)
-                .collect(Collectors.toList());
+                .collect(Collectors.collectingAndThen(Collectors.toList(), collectedCars -> Collections.unmodifiableList(collectedCars)));
     }
 
 }

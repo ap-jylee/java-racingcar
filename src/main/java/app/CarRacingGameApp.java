@@ -1,5 +1,6 @@
-package domain;
+package app;
 
+import domain.CarRacingGame;
 import view.InputView;
 import view.ResultView;
 
